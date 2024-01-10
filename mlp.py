@@ -49,6 +49,10 @@ plt.title('MLP: Training and Validation Accuracy')
 plt.savefig('mlp_training_and_validation_accuracy.png')
 plt.show()
 
+# Evaluate the model on the training set
+training_loss, training_acc = model.evaluate(train_images, train_labels)
+print(f'Training accuracy: {training_acc}')
+
 # Evaluate the model on the test set
 test_loss, test_acc = model.evaluate(test_images, test_labels)
 print(f'Test accuracy: {test_acc}')
